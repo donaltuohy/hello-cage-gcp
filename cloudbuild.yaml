@@ -11,9 +11,8 @@ steps:
         echo $$EV_CAGE_CERT > cert.pem
         cat key.pem
         cat cert.pem
-        pwd
         ls
-        ev-cage deploy
+        ev-cage deploy --signing-cert "/workspace/cert.pem" --private-key "/workspace/key.pem"
     secretEnv: ['EV_API_KEY', 'EV_CAGE_KEY', 'EV_CAGE_CERT']
 availableSecrets:
   secretManager:
