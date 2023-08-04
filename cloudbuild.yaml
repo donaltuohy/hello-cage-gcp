@@ -7,14 +7,12 @@ steps:
       - '-c'
       - |
         curl https://cage-build-assets.evervault.com/cli/install -sL | sh
-        echo $$EV_CAGE_KEY > key.pem
-        echo $$EV_CAGE_CERT > cert.pem
+        echo -e $$EV_CAGE_KEY > key.pem
+        echo -e $$EV_CAGE_CERT > cert.pem
         cat key.pem
         cat cert.pem
         ls
         date
-        cat /workspace/key.pem
-        cat /workspace/cert.pem
         ev-cage deploy --signing-cert "/workspace/cert.pem" --private-key "/workspace/key.pem"
     secretEnv: ['EV_API_KEY', 'EV_CAGE_KEY', 'EV_CAGE_CERT']
 availableSecrets:
