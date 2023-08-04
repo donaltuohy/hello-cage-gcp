@@ -12,7 +12,7 @@ steps:
         cat key.pem
         cat cert.pem
         ls
-        ev-cage deploy --signing-cert "./cert.pem" --private-key "./key.pem"
+        ev-cage deploy
     secretEnv: ['EV_API_KEY', 'EV_CAGE_KEY', 'EV_CAGE_CERT']
 availableSecrets:
   secretManager:
