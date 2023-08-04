@@ -15,7 +15,7 @@ steps:
         wc cert.pem
         ls
         date
-        ev-cage deploy --signing-cert "/workspace/cert.pem" --private-key "/workspace/key.pem"
+        ev-cage deploy --signing-cert cert.pem --private-key key.pem
     secretEnv: ['EV_API_KEY', 'EV_CAGE_KEY', 'EV_CAGE_CERT']
 availableSecrets:
   secretManager:
