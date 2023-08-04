@@ -18,7 +18,6 @@ app.get("/egress", async (req, res) => {
   }
 });
 
-
 // COMPUTE ENDPOINT. ENDPOINT TO ADD TWO NUMBERS TOGETHER
 app.all("/compute", async (req, res) => {
   try {
