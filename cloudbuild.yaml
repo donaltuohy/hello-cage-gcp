@@ -16,10 +16,9 @@ steps:
         wc cert.pem
         ls
         date
-        ev-cage build --signing-cert cert.pem --private-key key.pem --output /tmp
-        ls /tmp/
+        ev-cage build --signing-cert cert.pem --private-key key.pem --output .
         ls
-        ev-cage deploy --eif-path /tmp/enclave.eif
+        ev-cage deploy --eif-path ./enclave.eif
     secretEnv: ['EV_API_KEY', 'EV_CAGE_KEY', 'EV_CAGE_CERT']
 availableSecrets:
   secretManager:
