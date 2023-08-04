@@ -15,3 +15,14 @@ enabled = false
 [signing]
 certPath = "cert.pem"
 keyPath = "key.pem"
+
+[attestation]
+HashAlgorithm = "Sha384 { ... }"
+PCR0 = "76606549849d0912f6342f6a97826ab01e2f49a6a7be74369c5f0b0973712a7a625d594f8d199191152d1b47bdaa8818"
+PCR1 = "bcdf05fefccaa8e55bf2c8d6dee9e79bbff31e34bf28a99aa19e6b29c37ee80b214a414b7607236edf26fcb78654e63f"
+PCR2 = "84fedd9673bc4a46e873f668e8632013ca67b82dd051b98fc26c6f7ab64ea325781f52aa237f1da2c8f1fd44baa06d29"
+PCR8 = "2af914dada478a5b1d0fe5a08960587669f264c5364892a07a632b07043b73ee6ecf20461a17a5fdcd0e9912168e021f"
+
+[runtime]
+data_plane_version = "7ac56f05898132e15b62b26e370700363a125fdc"
+installer_version = "b8073166b7c5bc8fe2abf192f66e1106f2d4be547b1841be69f95ff2c4ea578c"
